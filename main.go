@@ -107,4 +107,19 @@ func main() {
 
 	fmt.Println(canIDrink(16))
 
+	// pointers
+	a := 2
+	b := a // copy of value
+	a = 10
+	fmt.Println(a, b)   // 10, 2
+	fmt.Println(&a, &b) // different memory address
+
+	a = 2
+	c := &a            // c is pointing at the address of a
+	fmt.Println(&a, c) // same address value
+	fmt.Println(*c)    // value of the address that c is pointing at -> 2
+
+	*c = 20        // updating value of a using c
+	fmt.Println(a) // -> 20
+
 }
