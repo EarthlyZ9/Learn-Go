@@ -33,6 +33,46 @@ func repeatMe(words ...string) {
 	fmt.Println(words)
 }
 
+func superAdd(numbers ...int) int {
+	// for loop
+	for index, number := range numbers {
+		fmt.Println(index, number)
+	}
+
+	// ignore index by using _
+
+	return 1
+}
+
+func superAdd2(numbers ...int) int {
+	for i := 0; i < len(numbers); i++ {
+		fmt.Println(numbers[i])
+	}
+	return 1
+}
+
+func canIDrink(age int) bool {
+	// if else
+	// creating variable inside if clause - variable expression
+	// "created koreanAge var only for the if clause"
+	if koreanAge := age + 2; koreanAge < 18 {
+		return false
+	}
+	return true
+}
+
+func canIDrink2(age int) bool {
+	switch {
+	case age < 18:
+		return false
+	case age == 18:
+		return true
+	case age > 50:
+		return false
+	}
+	return false
+}
+
 func main() {
 	fmt.Println("Hello world!")
 	// Only Upper Case functions are exported
@@ -62,5 +102,9 @@ func main() {
 	repeatMe("js", "earthlyz9", "jisoo", "leejisoo") // returns array
 
 	fmt.Println(lenAndUpper2("jisoo"))
+
+	superAdd(1, 2, 3, 4, 5, 6, 7)
+
+	fmt.Println(canIDrink(16))
 
 }
