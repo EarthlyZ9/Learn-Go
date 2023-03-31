@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/EarthlyZ9/learngo/somefunc"
+	"github.com/EarthlyZ9/learngo/tutorials/somefunc"
 )
 
 func multiply(a, b int) int {
