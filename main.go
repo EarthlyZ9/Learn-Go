@@ -122,4 +122,36 @@ func main() {
 	*c = 20        // updating value of a using c
 	fmt.Println(a) // -> 20
 
+	// arrays
+
+	names := [7]string{"js", "jisoo", "eartlyz9", "z9", "leejisoo"} // constant space (length)
+	names[5] = "JS"
+	names[6] = "LJS"
+
+	// slice
+	infinite_names := []string{"js", "jisoo", "eartlyz9", "z9", "leejisoo"}
+	fmt.Println(infinite_names)
+	infinite_names = append(infinite_names, "LJS") // append function alone does not modify the array itself, it just returns a new slice
+	fmt.Println(infinite_names)
+
+	// map
+	js := map[string]string{"name": "jisoo", "age": "24"} // type is restricted to 'string'
+	fmt.Println(js)
+	for key, value := range js {
+		fmt.Println(key, value)
+	}
+
+	// struct
+	// Go struct does not have constructor method like __init__ or constructor()
+	type person struct {
+		name    string
+		age     int
+		favFood []string
+	}
+
+	favFood := []string{"icecream", "coffee"}
+	// z9 := person{"jisoo", 24, favFood}
+	z9 := person{name: "jisoo", age: 24, favFood: favFood}
+	fmt.Println(z9)
+
 }
